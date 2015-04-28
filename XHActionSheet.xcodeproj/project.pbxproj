@@ -13,6 +13,9 @@
 		A35071D51AEFEBF3000B376C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35071D41AEFEBF3000B376C /* Images.xcassets */; };
 		A35071D81AEFEBF3000B376C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35071D61AEFEBF3000B376C /* LaunchScreen.xib */; };
 		A35071E41AEFEBF3000B376C /* XHActionSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35071E31AEFEBF3000B376C /* XHActionSheetTests.swift */; };
+		A35071EF1AEFEC95000B376C /* XHUIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35071EE1AEFEC95000B376C /* XHUIWindow+.swift */; };
+		A35071F11AEFECA1000B376C /* XHMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35071F01AEFECA1000B376C /* XHMaskView.swift */; };
+		A35071F31AEFECBD000B376C /* XHPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35071F21AEFECBD000B376C /* XHPopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		A35071DD1AEFEBF3000B376C /* XHActionSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XHActionSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35071E21AEFEBF3000B376C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35071E31AEFEBF3000B376C /* XHActionSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XHActionSheetTests.swift; sourceTree = "<group>"; };
+		A35071EE1AEFEC95000B376C /* XHUIWindow+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHUIWindow+.swift"; sourceTree = "<group>"; };
+		A35071F01AEFECA1000B376C /* XHMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHMaskView.swift; sourceTree = "<group>"; };
+		A35071F21AEFECBD000B376C /* XHPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +83,9 @@
 		A35071CA1AEFEBF3000B376C /* XHActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				A35071CD1AEFEBF3000B376C /* AppDelegate.swift */,
+				A35071ED1AEFEC7C000B376C /* XHActionSheet */,
 				A35071CF1AEFEBF3000B376C /* ViewController.swift */,
 				A35071D11AEFEBF3000B376C /* Main.storyboard */,
-				A35071D41AEFEBF3000B376C /* Images.xcassets */,
-				A35071D61AEFEBF3000B376C /* LaunchScreen.xib */,
 				A35071CB1AEFEBF3000B376C /* Supporting Files */,
 			);
 			path = XHActionSheet;
@@ -90,6 +94,9 @@
 		A35071CB1AEFEBF3000B376C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A35071CD1AEFEBF3000B376C /* AppDelegate.swift */,
+				A35071D41AEFEBF3000B376C /* Images.xcassets */,
+				A35071D61AEFEBF3000B376C /* LaunchScreen.xib */,
 				A35071CC1AEFEBF3000B376C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +117,16 @@
 				A35071E21AEFEBF3000B376C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A35071ED1AEFEC7C000B376C /* XHActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				A35071EE1AEFEC95000B376C /* XHUIWindow+.swift */,
+				A35071F01AEFECA1000B376C /* XHMaskView.swift */,
+				A35071F21AEFECBD000B376C /* XHPopView.swift */,
+			);
+			path = XHActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35071D01AEFEBF3000B376C /* ViewController.swift in Sources */,
+				A35071EF1AEFEC95000B376C /* XHUIWindow+.swift in Sources */,
+				A35071F11AEFECA1000B376C /* XHMaskView.swift in Sources */,
+				A35071F31AEFECBD000B376C /* XHPopView.swift in Sources */,
 				A35071CE1AEFEBF3000B376C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
