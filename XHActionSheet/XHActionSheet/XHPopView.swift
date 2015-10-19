@@ -13,10 +13,10 @@ class XHPopView:UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.kColor(241, green: 241, blue: 241)
+        backgroundColor = UIColor.kColor(245, green: 245, blue: 245)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -39,7 +39,7 @@ class XHPopView:UIView {
             //添加小分割线
             let seperateView = UIView(frame: CGRect(x: 0, y: CGFloat(i+1) * 50 + smallSeperateHeight, width: kViewWidth, height: smallSeperateHeight))
             addSubview(seperateView)
-            seperateView.backgroundColor = UIColor.lightGrayColor()
+            seperateView.backgroundColor = UIColor.aColor(220, green: 220, blue: 220, alpha: 50)
             i++
         }
         
@@ -61,7 +61,7 @@ class XHPopView:UIView {
         if let closure = indexClosure {
             closure(button.tag)
         } else {
-            println("you need assign to closure")
+            print("you need assign to closure")
         }
         
     }

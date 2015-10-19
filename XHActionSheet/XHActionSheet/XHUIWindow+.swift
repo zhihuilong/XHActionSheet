@@ -39,8 +39,8 @@ extension UIWindow {
     //消失popView
     func dismissPopButton() {
         let count = self.subviews.count
-        let maskView = self.subviews[count-2] as XHMaskView
-        let popView = self.subviews[count-1] as XHPopView
+        let maskView = self.subviews[count-2] as! XHMaskView
+        let popView = self.subviews[count-1] as! XHPopView
         UIView.animateWithDuration(0.3, animations: {
             maskView.alpha = 0
             popView.frame = CGRect(x: 0, y: kViewHeight, width: kViewWidth, height: popView.frame.height)

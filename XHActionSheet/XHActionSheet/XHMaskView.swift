@@ -9,6 +9,7 @@
 import UIKit
 
 class XHMaskView:UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.blackColor()
@@ -16,11 +17,11 @@ class XHMaskView:UIView {
         alpha = 0
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         window?.dismissPopButton()
     }
 }
