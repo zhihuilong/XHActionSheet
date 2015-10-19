@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func pop(sender: AnyObject) {
-        view.window?.showPopButtons(["拍照":UIColor.blackColor(),"相册":UIColor.blackColor()], closure: nil)
+        view.window?.showPopButtons(["拍照","相册"], closure: nil)
     }
     
 }

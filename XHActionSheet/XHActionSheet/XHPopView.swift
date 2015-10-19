@@ -9,6 +9,10 @@
 import UIKit
 
 class XHPopView:UIView {
+    
+    static var textButtonColor = UIColor.blackColor()
+    static var cancelButtonColor = UIColor.blackColor()
+    
     var indexClosure:((Int)->Void)?
     
     override init(frame: CGRect) {
@@ -20,7 +24,7 @@ class XHPopView:UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupSubViews(titles:[String:UIColor]) {
+    func setupSubViews(titles:[String]) {
         //计算控件个数
         let count = titles.count + 1
         let seperateHeight:CGFloat = 6
@@ -28,19 +32,17 @@ class XHPopView:UIView {
         
         frame = CGRect(x: 0, y: kViewHeight, width: kViewWidth, height: 50 * CGFloat(count) + seperateHeight)
         
-        var i  = 0
-        for title in titles {
+        for var i = 0; i < titles.count; ++i {
             let button = UIButton(frame: CGRect(x: 0, y: CGFloat(i) * 50 , width: kViewWidth, height: 50))
             addSubview(button)
             button.tag = i
-            button.setTitleColor(title.1, forState: UIControlState.Normal)
-            button.setTitle(title.0, forState: UIControlState.Normal)
+            button.setTitleColor(XHPopView.textButtonColor, forState: UIControlState.Normal)
+            button.setTitle(titles[i], forState: UIControlState.Normal)
             button.addTarget(self, action: Selector("whenButtonTouch:"), forControlEvents: UIControlEvents.TouchUpInside)
             //添加小分割线
             let seperateView = UIView(frame: CGRect(x: 0, y: CGFloat(i+1) * 50 + smallSeperateHeight, width: kViewWidth, height: smallSeperateHeight))
             addSubview(seperateView)
             seperateView.backgroundColor = UIColor.aColor(220, green: 220, blue: 220, alpha: 50)
-            i++
         }
         
         //分割线
@@ -51,7 +53,7 @@ class XHPopView:UIView {
         //取消按钮
         let cancelButton = UIButton(frame: CGRect(x: 0, y: CGFloat(titles.count) * 50 + seperateHeight, width: kViewWidth, height: 50))
         addSubview(cancelButton)
-        cancelButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        cancelButton.setTitleColor(XHPopView.cancelButtonColor, forState: UIControlState.Normal)
         cancelButton.setTitle("取消", forState: UIControlState.Normal)
         cancelButton.addTarget(self, action: Selector("cancel"), forControlEvents: UIControlEvents.TouchUpInside)
     }
