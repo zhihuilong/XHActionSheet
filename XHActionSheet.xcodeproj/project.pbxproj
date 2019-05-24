@@ -13,9 +13,9 @@
 		A35071D51AEFEBF3000B376C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35071D41AEFEBF3000B376C /* Images.xcassets */; };
 		A35071D81AEFEBF3000B376C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35071D61AEFEBF3000B376C /* LaunchScreen.xib */; };
 		A35071E41AEFEBF3000B376C /* XHActionSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35071E31AEFEBF3000B376C /* XHActionSheetTests.swift */; };
-		A3F89D751BD51B1200C38DC7 /* XHMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D721BD51B1200C38DC7 /* XHMaskView.swift */; settings = {ASSET_TAGS = (); }; };
-		A3F89D761BD51B1200C38DC7 /* XHPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D731BD51B1200C38DC7 /* XHPopView.swift */; settings = {ASSET_TAGS = (); }; };
-		A3F89D771BD51B1200C38DC7 /* XHUIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D741BD51B1200C38DC7 /* XHUIWindow+.swift */; settings = {ASSET_TAGS = (); }; };
+		A3F89D751BD51B1200C38DC7 /* XHMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D721BD51B1200C38DC7 /* XHMaskView.swift */; };
+		A3F89D761BD51B1200C38DC7 /* XHPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D731BD51B1200C38DC7 /* XHPopView.swift */; };
+		A3F89D771BD51B1200C38DC7 /* XHUIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F89D741BD51B1200C38DC7 /* XHUIWindow+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +180,7 @@
 				TargetAttributes = {
 					A35071C71AEFEBF3000B376C = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JXJR9DG58L;
 					};
 					A35071DC1AEFEBF3000B376C = {
 						CreatedOnToolsVersion = 6.2;
@@ -192,6 +193,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -359,10 +361,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JXJR9DG58L;
 				INFOPLIST_FILE = XHActionSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lzh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -370,10 +374,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JXJR9DG58L;
 				INFOPLIST_FILE = XHActionSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lzh.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

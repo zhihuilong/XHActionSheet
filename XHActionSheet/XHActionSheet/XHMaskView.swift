@@ -12,8 +12,8 @@ class XHMaskView:UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.blackColor()
-        self.frame = UIScreen.mainScreen().bounds
+        backgroundColor = UIColor.black
+        self.frame = UIScreen.main.bounds
         alpha = 0
     }
     
@@ -21,7 +21,7 @@ class XHMaskView:UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         window?.dismissPopButton()
     }
 }

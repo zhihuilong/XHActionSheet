@@ -17,20 +17,20 @@ extension UIColor {
     }
 }
 
-let kViewWidth:CGFloat     = UIScreen.mainScreen().bounds.size.width
-let kViewHeight:CGFloat    = UIScreen.mainScreen().bounds.size.height
+let kViewWidth:CGFloat     = UIScreen.main.bounds.size.width
+let kViewHeight:CGFloat    = UIScreen.main.bounds.size.height
 
 extension UIWindow {
     
     //弹出popView
     func showPopButtons(titles:[String],closure:((Int)->Void)? ) {
-        let maskView = XHMaskView(frame: CGRectZero)
+        let maskView = XHMaskView(frame: .zero)
         self.addSubview(maskView)
-        let popView = XHPopView(frame: CGRectZero)
+        let popView = XHPopView(frame: .zero)
         self.addSubview(popView)
         popView.indexClosure = closure
-        popView.setupSubViews(titles)
-        UIView.animateWithDuration(0.3, animations: {
+        popView.setupSubViews(titles: titles)
+        UIView.animate(withDuration: 0.3, animations: {
             maskView.alpha = 0.3
             popView.frame = CGRect(x: 0, y: kViewHeight - popView.frame.height, width: kViewWidth, height: popView.frame.height)
         })
@@ -41,7 +41,7 @@ extension UIWindow {
         let count = self.subviews.count
         let maskView = self.subviews[count-2] as! XHMaskView
         let popView = self.subviews[count-1] as! XHPopView
-        UIView.animateWithDuration(0.3, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             maskView.alpha = 0
             popView.frame = CGRect(x: 0, y: kViewHeight, width: kViewWidth, height: popView.frame.height)
             }) { (completion:Bool) -> Void in
